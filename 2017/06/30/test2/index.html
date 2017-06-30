@@ -1,0 +1,520 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<title>图像识别专家速成.md</title><link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css'><style type='text/css'>html, body {overflow-x: initial !important;}html { font-size: 14px; background-color: rgb(255, 255, 255); color: rgb(51, 51, 51); }
+body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 1rem; line-height: 1.42857143; overflow-x: hidden; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; background-position: inherit inherit; background-repeat: inherit inherit; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { background-color: rgb(181, 214, 252); text-shadow: none; background-position: initial initial; background-repeat: initial initial; }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; word-wrap: break-word; position: relative; padding-bottom: 70px; white-space: pre-wrap; overflow-x: auto; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+@media screen and (max-width: 500px) { 
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+.typora-export #write { margin: 0px auto; }
+#write > p:first-child, #write > ul:first-child, #write > ol:first-child, #write > pre:first-child, #write > blockquote:first-child, #write > div:first-child, #write > table:first-child { margin-top: 30px; }
+#write li > table:first-child { margin-top: -20px; }
+img { max-width: 100%; vertical-align: middle; }
+input, button, select, textarea { color: inherit; font-family: inherit; font-size: inherit; font-style: inherit; font-variant-caps: inherit; font-weight: inherit; line-height: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+::before, ::after, * { box-sizing: border-box; }
+#write p, #write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write div, #write pre { width: inherit; }
+#write p, #write h1, #write h2, #write h3, #write h4, #write h5, #write h6 { position: relative; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+p { -webkit-margin-before: 1rem; -webkit-margin-after: 1rem; -webkit-margin-start: 0px; -webkit-margin-end: 0px; }
+.mathjax-block { margin-top: 0px; margin-bottom: 0px; -webkit-margin-before: 0rem; -webkit-margin-after: 0rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: bold; font-style: italic; }
+a { cursor: pointer; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; margin: 4px 0px 0px; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 80px; }
+.CodeMirror-gutters { border-right-width: 0px; background-color: inherit; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+pre { white-space: pre-wrap; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; position: relative !important; background-position: inherit inherit; background-repeat: inherit inherit; }
+.md-diagram-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+.md-fences .CodeMirror.CodeMirror-wrap { top: -1.6em; margin-bottom: -1.6em; }
+.md-fences.mock-cm { white-space: pre-wrap; }
+.show-fences-line-number .md-fences { padding-left: 0px; }
+.show-fences-line-number .md-fences.mock-cm { padding-left: 40px; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; padding-top: 1em; padding-bottom: 1em; }
+.footnotes + .footnotes { margin-top: -1em; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background-color: transparent; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; line-height: normal; font-weight: normal; text-align: left; box-sizing: content-box; direction: ltr; background-position: initial initial; background-repeat: initial initial; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li p, li .mathjax-block { margin: 0.5rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; }
+@media print { 
+  html, body { height: 100%; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  h1, h2, h3, h4, h5, h6 { break-after: avoid-page; orphans: 2; }
+  p { orphans: 4; }
+  html.blink-to-pdf { font-size: 13px; }
+  .typora-export #write { padding-left: 1cm; padding-right: 1cm; }
+  .typora-export #write::after { height: 0px; }
+  @page { margin: 20mm 0mm; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 2.86rem; white-space: pre-wrap; background-color: rgb(204, 204, 204); display: block; overflow-x: hidden; background-position: initial initial; background-repeat: initial initial; }
+p .md-image:only-child { display: inline-block; width: 100%; text-align: center; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.mathjax-block { white-space: pre; overflow: hidden; width: 100%; }
+p + .mathjax-block { margin-top: -1.143rem; }
+.mathjax-block:not(:empty)::after { display: none; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus { outline: none; box-shadow: none; }
+.task-list { list-style-type: none; }
+.task-list-item { position: relative; padding-left: 1em; }
+.task-list-item input { position: absolute; top: 0px; left: 0px; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-top-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; border-bottom-left-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc::after, .md-toc-content::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); text-decoration: none; }
+.md-toc-inner:hover { }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: bold; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) { 
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: '.'; }
+.md-tag { opacity: 0.5; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: monospace; }
+code { text-align: left; }
+h1 .md-tag, h2 .md-tag, h3 .md-tag, h4 .md-tag, h5 .md-tag, h6 .md-tag { font-weight: initial; opacity: 0.35; }
+a.md-print-anchor { border: none !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: none !important; background-color: transparent !important; text-shadow: initial !important; background-position: initial initial !important; background-repeat: initial initial !important; }
+.md-inline-math .MathJax_SVG .noError { display: none !important; }
+.mathjax-block .MathJax_SVG_Display { text-align: center; margin: 1em 0em; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; display: block !important; }
+.MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
+.MathJax_SVG .MJX-monospace { font-family: monospace; }
+.MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
+.MathJax_SVG { display: inline; font-style: normal; font-weight: normal; line-height: normal; zoom: 90%; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
+.MathJax_SVG * { transition: none; }
+
+
+@include-when-export url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
+
+/**
+ * css forked from https://github.com/GitbookIO/gitbook 
+ * www.gitbook.com
+ * Apache License
+ * https://github.com/GitbookIO/gitbook/blob/master/LICENSE
+ **/
+
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Open Sans Regular'),url('file:///Users/thinkdeeper/Library/Application%20Support/abnerworks.Typora/themes/github/400.woff') format('woff')
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    font-style: italic;
+    font-weight: normal;
+    src: local('Open Sans Italic'),url('file:///Users/thinkdeeper/Library/Application%20Support/abnerworks.Typora/themes/github/400i.woff') format('woff')
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: bold;
+    src: local('Open Sans Bold'),url('file:///Users/thinkdeeper/Library/Application%20Support/abnerworks.Typora/themes/github/700.woff') format('woff')
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    font-style: italic;
+    font-weight: bold;
+    src: local('Open Sans Bold Italic'),url('file:///Users/thinkdeeper/Library/Application%20Support/abnerworks.Typora/themes/github/700i.woff') format('woff')
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: "Open Sans","Clear Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    color: rgb(51, 51, 51);
+    line-height: 1.6;
+}
+
+#write{
+    max-width: 860px;
+  	margin: 0 auto;
+  	padding: 20px 30px 40px 30px;
+	padding-top: 20px;
+    padding-bottom: 100px;
+}
+#write > ul:first-child,
+#write > ol:first-child{
+    margin-top: 30px;
+}
+
+body > *:first-child {
+    margin-top: 0 !important;
+}
+body > *:last-child {
+    margin-bottom: 0 !important;
+}
+a {
+    color: #4183C4;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+}
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    /*background: url("file:///Users/thinkdeeper/Library/Application%20Support/images/modules/styleguide/para.png") no-repeat 10px center;*/
+    text-decoration: none;
+}
+h1 tt,
+h1 code {
+    font-size: inherit;
+}
+h2 tt,
+h2 code {
+    font-size: inherit;
+}
+h3 tt,
+h3 code {
+    font-size: inherit;
+}
+h4 tt,
+h4 code {
+    font-size: inherit;
+}
+h5 tt,
+h5 code {
+    font-size: inherit;
+}
+h6 tt,
+h6 code {
+    font-size: inherit;
+}
+h1 {
+    padding-bottom: .3em;
+    font-size: 2.25em;
+    line-height: 1.2;
+    border-bottom: 1px solid #eee;
+}
+h2 {
+   padding-bottom: .3em;
+    font-size: 1.75em;
+    line-height: 1.225;
+    border-bottom: 1px solid #eee;
+}
+h3 {
+    font-size: 1.5em;
+    line-height: 1.43;
+}
+h4 {
+    font-size: 1.25em;
+}
+h5 {
+    font-size: 1em;
+}
+h6 {
+   font-size: 1em;
+    color: #777;
+}
+p,
+blockquote,
+ul,
+ol,
+dl,
+table{
+    margin: 0.8em 0;
+}
+li>ol,
+li>ul {
+    margin: 0 0;
+}
+hr {
+    height: 4px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+    border-bottom: 1px solid #ddd;
+}
+
+body > h2:first-child {
+    margin-top: 0;
+    padding-top: 0;
+}
+body > h1:first-child {
+    margin-top: 0;
+    padding-top: 0;
+}
+body > h1:first-child + h2 {
+    margin-top: 0;
+    padding-top: 0;
+}
+body > h3:first-child,
+body > h4:first-child,
+body > h5:first-child,
+body > h6:first-child {
+    margin-top: 0;
+    padding-top: 0;
+}
+a:first-child h1,
+a:first-child h2,
+a:first-child h3,
+a:first-child h4,
+a:first-child h5,
+a:first-child h6 {
+    margin-top: 0;
+    padding-top: 0;
+}
+h1 p,
+h2 p,
+h3 p,
+h4 p,
+h5 p,
+h6 p {
+    margin-top: 0;
+}
+li p.first {
+    display: inline-block;
+}
+ul,
+ol {
+    padding-left: 30px;
+}
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+blockquote {
+    border-left: 4px solid #dddddd;
+    padding: 0 15px;
+    color: #777777;
+}
+blockquote blockquote {
+    padding-right: 0;
+}
+table {
+    padding: 0;
+    word-break: initial;
+}
+table tr {
+    border-top: 1px solid #cccccc;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+}
+table tr:nth-child(2n) {
+    background-color: #f8f8f8;
+}
+table tr th {
+    font-weight: bold;
+    border: 1px solid #cccccc;
+    text-align: left;
+    margin: 0;
+    padding: 6px 13px;
+}
+table tr td {
+    border: 1px solid #cccccc;
+    text-align: left;
+    margin: 0;
+    padding: 6px 13px;
+}
+table tr th:first-child,
+table tr td:first-child {
+    margin-top: 0;
+}
+table tr th:last-child,
+table tr td:last-child {
+    margin-bottom: 0;
+}
+
+.CodeMirror-gutters {
+    border-right: 1px solid #ddd;
+}
+
+.md-fences,
+code,
+tt {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+    padding: 0;
+    font-family: Consolas, "Liberation Mono", Courier, monospace;
+    padding: 2px 4px 0px 4px;
+    font-size: 0.9em;
+}
+
+.md-fences {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding: 0.2em 1em;
+    padding-top: 8px;
+    padding-bottom: 6px;
+}
+.task-list{
+	padding-left: 0;
+}
+
+.task-list-item {
+	padding-left:32px;
+}
+
+.task-list-item input {
+  top: 3px;
+  left: 8px;
+}
+
+@media screen and (min-width: 914px) {
+    /*body {
+        width: 854px;
+        margin: 0 auto;
+    }*/
+}
+@media print {
+    html {
+        font-size: 13px;
+    }
+    table,
+    pre {
+        page-break-inside: avoid;
+    }
+    pre {
+        word-wrap: break-word;
+    }
+}
+
+.md-fences {
+	background-color: #f8f8f8;
+}
+#write pre.md-meta-block {
+	padding: 1rem;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border: 0;
+    border-radius: 3px;
+    color: #777777;
+    margin-top: 0 !important;
+}
+
+.mathjax-block>.code-tooltip {
+	bottom: .375rem;
+}
+
+#write>h3.md-focus:before{
+	left: -1.5625rem;
+	top: .375rem;
+}
+#write>h4.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h5.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h6.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+.md-image>.md-meta {
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    font-family: Consolas, "Liberation Mono", Courier, monospace;
+    padding: 2px 4px 0px 4px;
+    font-size: 0.9em;
+    color: inherit;
+}
+
+.md-tag{
+	color: inherit;
+}
+
+.md-toc { 
+    margin-top:20px;
+    padding-bottom:20px;
+}
+
+#typora-quick-open {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+}
+
+#typora-quick-open-item {
+    background-color: #FAFAFA;
+    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
+    border-style: solid;
+    border-width: 1px;
+}
+
+#md-notification:before {
+    top: 10px;
+}
+
+/** focus mode */
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header, .context-menu, .megamenu-content, footer{
+    font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+
+</style>
+</head>
+<body class='typora-export' >
+<div  id='write'  class = 'is-mac'><h1><a name='header-c5' class='md-header-anchor '></a>图像识别专家速成</h1><p>译者：郭红广</p><blockquote><p>导读：</p></blockquote><blockquote><p>技术的更替如此之快。NLP的进化史：从规则，再到统计方法，最后到深度学习。图像识别也不例外，深度学习代替了特征提取+浅层模型这对cp。如果你还叹息没有早早加入图像识别领域的话，现在是最好时机。深度学习的出现，让大家走到了同一个起跑线上，不管你是初学者还是图像特征提取专家。</p></blockquote><blockquote><p>这篇文章将会带领你领略下在图像识别领域里最先进的深度学习模型，那我们向专家的道路向进发吧！</p></blockquote><p></p><p><img src='/Users/thinkdeeper/FarBox/thinker.farbox.com/_image/2017-06-17/23-49-36.jpg' alt='23-49-36' /></p><p></p><p>几个月前，我写了一篇关于如何使用已经训练好的卷积(预训练)神经网络模型（特别是VGG16）对图像进行分类的教程，这些已训练好的模型是用Python和Keras深度学习库对ImageNet数据集进行训练得到的。</p><p>这些已集成到(先前是和Keras分开的)Keras中的预训练模型能够识别1000种类别对象(例如我们在日常生活中见到的小狗，小猫等)，准确率也非常的高。</p><p>先前预训练的ImageNet模型和Keras库是分开的，需要我们克隆一个单独github repo，然后加到工程里。</p><p>使用单独的github repo来维护就行了。不过，在预训练的模型(VGG16，VGG19，ResNet50，Inception V3和Xception)完全集成到Keras库之前(不需要克隆单独的备份)，我的教程已经发布了，<a href='https://github.com/fchollet/keras/blob/master/keras/applications/vgg16.py'>集成后的模型地址</a>。所以我打算写一个新的教程，演示怎么使用这些最先进的模型。</p><p>详细点来说，写一个Python脚本，能加载使用这些网络模型，后端使用TensorFlow或Theano，然后预测你的测试集。</p><h2><a name='header-c34' class='md-header-anchor '></a>VGGNet，ResNet，Inception, and Xception with Keras</h2><p>在本教程的前半部分，我将简要说下Keras库中包含的VGG，ResNet，Inception和Xception模型架构。</p><p>然后，使用Keras来写一个Python脚本，可以从磁盘加载这些预训练的网络模型，然后预测测试集。</p><p>最后，在几个示例图像上查看这些分类的结果。</p><p>##Keras最先进的深度学习图像分类模型(State-of-the-art deep learning image classifiers in Keras)</p><p>下面五个卷积神经网络模型已经在Keras库中开箱即用：</p><ol start='' ><li>VGG16</li><li>VGG19</li><li>ResNet50</li><li>Inception V3</li><li>Xception</li></ol><p>我们从ImageNet数据集的概述开始，然后简要讨论每个模型架构。</p><h2><a name='header-c63' class='md-header-anchor '></a>ImageNet是什么东东</h2><p>ImageNet是一个手动标注好类别的图片数据库(为了机器视觉研究)，目前已有22,000个类别。</p><p>然而，当我们在深度学习和卷积神经网络的背景下听到“ImageNet”一词时，我们可能会提到ImageNet视觉识别比赛，称为ILSVRC。</p><p>这个图片分类比赛是训练一个模型，能够将输入图片正确分类到1000个类别中的某个类别。训练集120万，验证集5万，测试集10万。</p><p>这1,000个图片类别是我们在日常生活中遇到的，例如狗，猫，各种家居物品，车辆类型等等。<a href='http://image-net.org/challenges/LSVRC/2014/browse-synsets'>ILSVRC比赛中图片类别的完整列表</a>。</p><p>在图像分类方面，ImageNet比赛准确率已经作为计算机视觉分类算法的基准。自2012年以来，卷积神经网络和深度学习技术主导了这一比赛的排行榜。</p><p>过去几年在ImageNet比赛中，在Keras有几个表现最好的CNN(卷积神经网络)模型。这些模型通过迁移学习技术(特征提取,微调(fine-tuning))，对ImaegNet以外的数据集有很强的泛化能力。</p><h2><a name='header-c76' class='md-header-anchor '></a>VGG16 and VGG19</h2><p><img src='/Users/thinkdeeper/FarBox/thinker.farbox.com/_image/2017-06-17/21-25-10.jpg' alt='21-25-10' /></p><p>在2014年，VGG模型架构由Simonyan和Zisserman提出，并发表在<a href='https://arxiv.org/abs/1409.1556'>Very Deep Convolutional Networks for Large Scale Image Recognition</a>。</p><p>VGG模型结构简单有效，前几层仅使用3×3卷积核来增加网络深度，通过max pooling(最大池化)依次减少每层的神经元数量，最后三层分别是2个有4096个神经元的全连接层和一个softmax层。</p><p>“16”和“19”表示网络中的需要更新需要weight(要学习的参数)的网络层数(下面的图2中的列D和E),包括卷积层，全连接层，softmax层：</p><p><img src='/Users/thinkdeeper/FarBox/thinker.farbox.com/_image/2017-06-17/08-37-31.jpg' alt='08-37-31' /></p><p>Figure 2: Table 1 of <a href='https://arxiv.org/abs/1409.1556'>Very Deep Convolutional Networks for Large Scale Image Recognition, Simonyan and Zisserman (2014)</a>.</p><p>在2014年，16层和19层的网络被认为已经很深了，但和现在的ResNet架构比起来已不算什么了，ResNet可以在ImageNet上做到50-200层的深度，而对于CIFAR-10了来说可以做到1000+的深度。</p><p>Simonyan和Zisserman发现训练VGG16和VGG19有些难点(尤其是深层网络的收敛问题)。因此为了更容易训练，他们减少了需要更新weight的层数(图2中A列和C列)来训练较小的模型。</p><p>较小的网络收敛后，然后用较小网络学到的weight初始化更深网络的weight。这就是预训练。这样做看起没有问题，不过预训练模型在能被使用之前，需要非常耗时的训练。</p><p>在大多数情况下，我们可以不用预训练模型初始化，而是更喜欢采用Xaiver/Glorot初始化或MSRA初始化,<a href='https://arxiv.org/abs/1502.01852'>Delving Deep into Rectifiers: Surpassing Human-Level Performance on ImageNet Classification</a>。读<a href='https://arxiv.org/abs/1511.06422'>All you need is a good init</a>这篇paper可以更深了解weight初始化和深层神经网络收敛的重要性。</p><p>不幸的是，VGG有两个主要的缺点：</p><ol start='' ><li><strong>训练非常慢</strong></li><li><strong>网络架构weight数量相当大</strong>，很消耗磁盘空间。</li></ol><p>由于其全连接节点的数量较多，再加上网络比较深，VGG16有533MB+，VGG19有574MB。这使得部署VGG比较耗时。我们仍然在很多深度学习的图像分类问题中使用VGG，然而，较小的网络架构通常更为理想(例如SqueezeNet，GoogLeNet等)。</p><h2><a name='header-c108' class='md-header-anchor '></a>ResNet(残差网络)</h2><p>与传统的顺序网络架构(如AlexNet，OverFeat和VGG)不同，其加入了<strong>y=x层(恒等映射层)</strong>,可以让网络随深度增加而不退化。下图展示了一个构建快(build block)，输入经过两个weight层，最后和输入相加，形成一个微架构模块。ResNet最终由许多微架构模块组成。</p><p><img src='/Users/thinkdeeper/FarBox/thinker.farbox.com/_image/2017-06-17/10-04-31.jpg' alt='10-04-31' /></p><p>Figure 3: The residual module in ResNet as originally proposed by He et al. in 2015.</p><p>在2015年的“<a href='https://arxiv.org/abs/1512.03385'>Deep Residual Learning for Image Recognition</a>”文章中，He等人首先提出ResNet，ResNet架构已经成为一项有意义的模型，其可以通过使用残差模块和常规SGD（需要合理的初始化weight）来训练非常深的网络：</p><p>在2016年后发表的文章“<a href='https://arxiv.org/abs/1603.05027'>Identity Mappings in Deep Residual Networks</a>”中表明，通过使用<strong>identity mapping(恒等映射)</strong>来更新残差模块，可以获得很高的准确性。</p><p><img src='/Users/thinkdeeper/FarBox/thinker.farbox.com/_image/2017-06-17/10-25-18.jpg' alt='10-25-18' /></p><p><code>Figure 4: (Left) The original residual module. (Right) The updated residual module using pre-activation.</code></p><p>需要注意的一点是，Keras库中的ResNet50(50个weight层)的实现是基于2015年前的论文。</p><p>即使是RESNET比VGG16和VGG19更深，模型的大小实际上是相当小的，用global average pooling(全局平均水平池)代替全连接层-这降低模型的大小到102MB。</p><h2><a name='header-c127' class='md-header-anchor '></a>Inception V3</h2><p>“Inception”微架构由Szegedy等人在2014年paper<a href='https://arxiv.org/abs/1409.4842'>Going Deeper with Convolutions</a>中首次提出。</p><p><img src='/Users/thinkdeeper/FarBox/thinker.farbox.com/_image/2017-06-17/12-28-50.png' alt='12-28-50' /></p><p>Figure 5: The original Inception module used in GoogLeNet.</p><p>Inception模块的目的是充当<strong>“多级特征提取器”</strong>，使用1×1,3×3,和5×5的卷积核，最后把这些卷积输出连接起来，当做下一层的输入。</p><p>这种架构先前叫GoogLeNet，现在简单地被称为Inception vN，其中N指的是由Google定的版本号。Keras库中的Inception V3架构实现基于Szegedy等人后来写的paper<a href='https://arxiv.org/abs/1512.00567'>Rethinking the Inception Architecture for Computer Vision</a>,其中提出了对Inception模块的更新，进一步提高了ImageNet分类效果。Inception V3的weight数量小于VGG和ResNet，大小为96MB。</p><h2><a name='header-c138' class='md-header-anchor '></a>Xception</h2><p><img src='/Users/thinkdeeper/FarBox/thinker.farbox.com/_image/2017-06-17/20-58-32.png' alt='20-58-32' /></p><p>Figure 6: The Xception architecture.</p><p></p><p>Xception是由FrançoisChollet本人(keras维护者)提出的。Xception是Inception架构的扩展，它用深度可分离的卷积代替了标准的Inception模块。原文“<a href='https://arxiv.org/abs/1610.02357'>Xception: Deep Learning with Depthwise Separable Convolutions</a>” 。Xception的weight数量最少，只有91MB。</p><h2><a name='header-c147' class='md-header-anchor '></a>What about SqueezeNet?</h2><p><img src='/Users/thinkdeeper/FarBox/thinker.farbox.com/_image/2017-06-17/21-06-10.jpg' alt='21-06-10' /></p><p>Figure 7: The “fire” module in SqueezeNet, consisting of a “squeeze” and an “expand”. (Iandola et al., 2016).</p><p>SqueezeNet架构通过使用squeeze卷积层和扩展层(1x1和3X3卷积核混合而成)组成的fire moule获得了AlexNet级精度,且模型大小仅4.9MB。</p><p>虽然SqueezeNet模型非常小，但其训练需要技巧。在我即将出版的书“深度学习计算机视觉与Python”中，详细说明了怎么在ImageNet数据集上从头开始训练SqueezeNet。</p><h2><a name='header-c156' class='md-header-anchor '></a>Classifying images with VGGNet, ResNet, Inception, and Xception with Python and Keras</h2><p>让我们学习如何使用Keras库中预训练的卷积神经网络模型进行图像分类吧。代码如下：</p><p><img src='/Users/thinkdeeper/FarBox/thinker.farbox.com/_image/2017-06-17/21-36-40.jpg' alt='21-36-40' /></p><p>第2-13行导入我们需要的Python包。大多数包是Keras库的。具体来说，第2-6行分别导入ResNet50，Inception V3，Xception，VGG16和VGG19。需要注意，Xception网络只能用TensorFlow后端(如果使用Theano后端,该类会抛出错误)。第7行，使用imagenet_utils模块，其有一些函数可以很方便的进行输入图像预处理和解码输出分类。除此之外，还导入的其他辅助函数，其次是NumPy进行数值处理，cv2进行图像编辑。</p><p>接下来，解析命令行参数：</p><p><img src='/Users/thinkdeeper/FarBox/thinker.farbox.com/_image/2017-06-17/21-51-57.jpg' alt='21-51-57' /></p><p>我们只需要一个命令行参数<code>--image</code>，这是要分类的输入图像的路径。还可以接受一个可选的命令行参数<code>--model</code>，指定想要使用的预训练模型，默认使用<code>vgg16</code>。通过命令行参数得到指定预训练模型的名字，我们需要定义一个Python字典，将模型名称(字符串)映射到其真实的Keras类。</p><p><img src='/Users/thinkdeeper/FarBox/thinker.farbox.com/_image/2017-06-17/22-04-18.jpg' alt='22-04-18' /></p><p>第25-31行定义了MODELS字典，它将模型名称字符串映射到相应的类。如果在MODELS中找不到<code>--model</code>名称，将抛出AssertionError(34-36行）。卷积神经网络将图像作为输入，然后返回与类标签相对应的一组概率作为输出。</p><p>经典的CNN输入图像的尺寸，是224×224，227×227，256×256，和299×299，但也可以是其他尺寸。</p><p>VGG16，VGG19和ResNet均接受224×224输入图像，而Inception V3和Xception需要299×299像素输入，如下面的代码块所示：</p><p><img src='/Users/thinkdeeper/FarBox/thinker.farbox.com/_image/2017-06-17/22-17-12.jpg' alt='22-17-12' /></p><p>将inputShape初始化为224×224像素。我们还使用函数preprocess_input执行平均减法。</p><p>然而，如果使用Inception或Xception，我们需要把inputShape设为299×299像素，接着<code>preprocess_input</code>使用<code>separate pre-processing function</code>，图片可以进行不同类型的缩放。</p><p>下一步是从磁盘加载预训练的模型weight(权重)并实例化模型:</p><p><img src='/Users/thinkdeeper/FarBox/thinker.farbox.com/_image/2017-06-17/22-30-20.jpg' alt='22-30-20' /></p><p>58行，从<code>--model</code>命令行参数得到model的名字，通过<code>MODELS</code>词典映射到相应的类。</p><p>59行，然后使用预训练的ImageNet权重实例化卷积神经网络。</p><p>注意：VGG16和VGG19的权重文件大于500MB。ResNet为〜100MB，而Inception和Xception在90-100MB之间。如果是第一次运行此脚本，这些权重文件自动下载并缓存到本地磁盘。根据您的网络速度，这可能需要一些时间。然而，一旦权重文件被下载下来，他们将不需要重新下载，再次运行 <code>classify_image.py</code>会非常的快。</p><p>模型现在已经加载并准备好进行图像分类 - 我们只需要准备图像进行分类：</p><p><img src='/Users/thinkdeeper/FarBox/thinker.farbox.com/_image/2017-06-17/22-38-45.jpg' alt='22-38-45' /></p><p>65行，从磁盘加载输入图像，<code>inputShape</code>调整图像的宽度和高度。</p><p>66行，将图像从PIL/Pillow实例转换为NumPy数组。</p><p>输入图像现在表示为(inputShape[0],inputShape[1],3)的NumPy数组。</p><p>72行，我们通常会使用卷积神经网络分批对图像进行训练/分类，因此我们需要通过<code>np.expand_dims</code>向矩阵添加一个额外的维度(颜色通道)。</p><p>经过<code>np.expand_dims</code>处理，<code>image</code>具有的形状(1,inputShape[0],inputShape[1],3)。<strong>如没有添加这个额外的维度，调用<code>.predict</code>会导致错误</strong>。</p><p>最后，76行调用相应的预处理功能来执行数据归一化。</p><p>经过模型预测后，并获得输出分类:</p><p><img src='/Users/thinkdeeper/FarBox/thinker.farbox.com/_image/2017-06-17/22-59-35.jpg' alt='22-59-35' /></p><p>80行，调用CNN中<code>.predict</code>得到预测结果。根据这些预测结果，将它们传递给ImageNet辅助函数<code>decode_predictions</code>，会得到ImageNet类标签名字(id转换成名字，可读性高)以及与标签相对应的概率。</p><p>然后，第85行和第86行将前5个预测(即具有最大概率的标签)输出到终端  。</p><p>在我们结束示例之前，我们将在此处执行的最后一件事情，通过OpenCV从磁盘加载我们的输入图像，在图像上绘制＃1预测，最后将图像显示在我们的屏幕上：</p><p><img src='/Users/thinkdeeper/FarBox/thinker.farbox.com/_image/2017-06-17/23-08-13.jpg' alt='23-08-13' /></p><p>查看预训练模型的实际运行，请看下节。</p><h2><a name='header-c223' class='md-header-anchor '></a>VGGNet, ResNet, Inception, and Xception classification results</h2><p>这篇博客文章中的所有示例都使用Keras&gt;=2.0和TensorFlow后端。如果使用TensorFlow，请确保使用版本&gt;=1.0，否则将遇到错误。我也用Theano后端测试了这个脚本，并确认可以使用Theano。</p><p>安装TensorFlow/Theano和Keras后，点击底部的源代码+示例图像链接就可下载。</p><p>现在我们可以用VGG16对图像进行分类：</p><p><img src='/Users/thinkdeeper/FarBox/thinker.farbox.com/_image/2017-06-17/23-20-09.jpg' alt='23-20-09' /></p><p>我们可以看到VGG16正确地将图像分类为“足球”，概率为93.43％。</p><p>要使用VGG19，我们只需要更改<code>--network</code>命令行参数：</p><p><img src='/Users/thinkdeeper/FarBox/thinker.farbox.com/_image/2017-06-17/23-23-31.jpg' alt='23-23-31' /></p><p>VGG19能够以91.76％的概率将输入图像正确地分类为“convertible”。看看其他top-5预测：“跑车”的概率为4.98％(其实是轿车)，“豪华轿车”为1.06％(虽然不正确但看着合理)，“车轮”为0.75％(从模型角度来说也是正确的,因为图像中有车轮)。</p><p>在以下示例中，我们使用预训练ResNet架构，可以看下top-5概率值：</p><p><img src='/Users/thinkdeeper/FarBox/thinker.farbox.com/_image/2017-06-17/23-29-13.jpg' alt='23-29-13' /></p><p>ResNet正确地将ClintEastwood持枪图像分类为“左轮手枪”，概率为69.79％。在top-5中还有，“步枪”为7.74％，“冲锋枪”为5.63％。由于&quot;左轮手枪&quot;的视角，枪管较长，CNN很容易认为是步枪，所以得到的步枪也较高。</p><p>下一个例子用ResNet对狗的图像进行分类：</p><p><img src='/Users/thinkdeeper/FarBox/thinker.farbox.com/_image/2017-06-17/19-10-40.jpg' alt='19-10-40' /></p><p>狗的品种被正确识别为“比格犬”，具有94.48％的概率。</p><p>然后，我尝试从这个图像中分出《加勒比海盗》演员约翰尼・德普：</p><p><img src='/Users/thinkdeeper/FarBox/thinker.farbox.com/_image/2017-06-17/19-16-38.jpg' alt='19-16-38' /></p><p>虽然ImageNet中确实有一个“船”类，但有趣的是，Inception网络能够正确地将场景识别为“(船)残骸”，且有具有96.29％概率的。所有其他预测标签，包括 “海滨”，“独木舟”，“桨”和“防波堤”都是相关的，在某些情况下也是绝对正确的。</p><p>对于Inception网络的另一个例子，我给办公室的沙发拍摄了照片：</p><p><img src='/Users/thinkdeeper/FarBox/thinker.farbox.com/_image/2017-06-17/19-20-35.jpg' alt='19-20-35' /></p><p>Inception正确地预测出图像中有一个“桌灯”，概率为69.68％。其他top-5预测也是完全正确的，包括“工作室沙发”，“窗帘”(图像的最右边，几乎不显眼)“灯罩”和“枕头”。</p><p>Inception虽然没有被用作对象检测器，但仍然能够预测图像中的前5个对象。卷积神经网络可以做到完美的对物体进行识别！</p><p>再来看下Xception：</p><p><img src='/Users/thinkdeeper/FarBox/thinker.farbox.com/_image/2017-06-17/19-27-46.jpg' alt='19-27-46' /></p><p>这里我们有一个苏格兰桶的图像，尤其是我》最喜欢的苏格兰威士忌，拉加维林。Xception将此图像正确地分类为  “桶”。</p><p>最后一个例子是使用VGG16进行分类：</p><p><img src='/Users/thinkdeeper/FarBox/thinker.farbox.com/_image/2017-06-17/19-29-26.jpg' alt='19-29-26' /></p><p>几个月前，当我完成了The Witcher III(The Wild Hunt)之后，我给显示器照了这个照片。VGG16的第一个预测是“家庭影院”，这是一个合理的预测，因为top-5预测中还有一个“电视/监视器”。</p><p>从本文章的示例可以看出，在ImageNet数据集上预训练的模型能够识别各种常见的日常对象。我希望你可以在你自己的项目中使用这个代码！</p><h2><a name='header-c280' class='md-header-anchor '></a>Summary</h2><p>在今天的博文中，我们介绍了在Keras中五个卷积神经网络模型：</p><p>1.VGG16</p><p>2.VGG19</p><p>3.ResNet50</p><p>4.初创V3</p><p>5.Xception</p><p>然后，我又演示了如何使用这些神经网络模型来分类图像。</p><blockquote><p>点评：</p></blockquote><blockquote><p>这篇只是介绍了怎么使用Keras中预训练模型，虽然直接使用这些模型能得到和专家级别同样的效果，但模型的具体架构，怎么调参，背后思想等一些知识还需要读者去参考其他资料。我建议先直接去读Keras中这些代码，遇到不了解的知识点再去查找其他资料。</p></blockquote></div>
+</body>
+</html>
