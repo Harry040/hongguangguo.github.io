@@ -302,3 +302,19 @@ if __name__ == '__main__':
 重点是63-69行， 比如你同事训练好一个模型`checkpoint_model-999`。你用时，直接加载事先定义的op即可。
 
 比如67，68行。 `tf.get_collection`操作需要事先在train中用`tf.add_to_collection`定义。
+
+
+
+
+
+
+
+
+
+---------
+
+=======================害羞的分割线================
+
+如对您有帮助，请赐我钱进的动力吧！《：
+
+![ok](/Users/thinkdeeper/Downloads/ok.jpg)
