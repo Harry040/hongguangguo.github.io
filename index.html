@@ -266,6 +266,131 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="https://hongguangguo.github.io/hongguangguo/2017/07/09/tensorflow-checkpoint/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ghg">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/author.JPG">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="灵感栖息地">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/07/09/tensorflow-checkpoint/" itemprop="url">tensorflow checkpoint  用法</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-09T11:40:20+08:00">
+                2017-07-09
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h2 id="1-why-tensorflow-checkpoint？"><a href="#1-why-tensorflow-checkpoint？" class="headerlink" title="1. why tensorflow checkpoint？"></a>1. why tensorflow checkpoint？</h2><p>场景1：</p>
+<p>​    一个model从零开始训练，花了一天时间，loss稳定了。这时你想到另一个不错的loss function，实验时，难道还要从零开始吗？那太耗时了，这时就可以用你保存的checkpoint来初始化你的model。训练时间会大大减少</p>
+<p>场景2：</p>
+<p>​    你model训练到3000step时，你发现一个log日志忘了打印，或者一个小bug需要改等等。由于你保存了checkpoint，这时你可以毫不犹豫的kill掉进程，改代码修补。</p>
+<p>场景3：</p>
+<p>​    你的model训练了很多steps，比如10000 steps。但是哪一步是比较好的呢？这时你可以加载不同step的checkpoint进行评测。</p>
+<p>场景4：</p>
+<p>​    这个场景也是工作的需求，生产环境用的是c++，而model是用keras训练的。那怎么部署呢？很简单，直接<code>tf.train.Saver</code>保存，用c++可以直接加载。<a href="https://github.com/tensorflow/tensorflow/blob/ad50dafe8dfc9ee2b3e0f21d4a1ff37a80f220aa/tensorflow/python/training/saver.py#L876" target="_blank" rel="external">参考链接</a></p>
+<p>场景n:</p>
+<p>​    你想到什么场景，可以邮件联系我，万分感谢！</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/07/09/tensorflow-checkpoint/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="https://hongguangguo.github.io/hongguangguo/2017/07/02/a-sensitivity-analysis-of-conv-nn-for-sentence-classification/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -574,7 +699,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
